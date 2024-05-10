@@ -1,0 +1,38 @@
+<p-table [value]="products">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Rating</th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price | currency }}</td>
+        <td>{{ product.description }}</td>
+        <td>
+          <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
+        </td>
+        <td>
+          <!-- Add CRUD buttons here -->
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  
+  <ngx-charts-bar-vertical
+    [scheme]="colorScheme"
+    [results]="chartData"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+  >
+  </ngx-charts-bar-vertical>

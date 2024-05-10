@@ -25,9 +25,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css"
             ],
             "scripts": [],
+            
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -96,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "077b5a8d-133c-4238-b647-0a5cbfbc97b9"
   }
 }
